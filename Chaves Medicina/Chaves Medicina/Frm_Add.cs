@@ -82,21 +82,7 @@ namespace Chaves_Medicina
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
-            if(add == 1)
-            {
-
-            }
-            else
-            {
-                if(add == 2)
-                {
-                    
-                }
-                else
-                {
-
-                }
-            }
+            vereicaDisponibilidadeAndInsert();
         }
 
         private void Tm_Mestre_Tick(object sender, EventArgs e)
@@ -138,6 +124,57 @@ namespace Chaves_Medicina
             {
                 e.Handled = true;
             }
+        }
+
+        public void vereicaDisponibilidadeAndInsert()
+        {
+            if (add == 1)
+            {
+                Camadas.BLL.Bll_Chave bllChave = new Camadas.BLL.Bll_Chave();
+                List<Camadas.MODEL.Model_Chaves> lst_Chave = new List<Camadas.MODEL.Model_Chaves>();
+                lst_Chave = bllChave.SelectByNumero(Txt_Parametro1.Text);
+                if(lst_Chave.Count > 0)
+                {
+                    MessageBox.Show("Erro Chave ja cadastrada!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   
+                }
+                else
+                {
+                    if(MessageBox.Show("Deseja Adicionar esta chave?","Atenção",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Camadas.MODEL.Model_Chaves chave = new Camadas.MODEL.Model_Chaves();
+
+                        chave.desc = Txt_Parametro1.Text;
+                        chave.situacao = 0;
+                        chave.armario = Convert.ToInt32(Txt_Parametro1.Text);
+
+                        bllChave.Insert(chave);
+                    }
+                }
+
+            }
+            else
+            {
+                if (add == 2)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            limpa();
+            Txt_Parametro1.Focus();
+        }
+
+        public void limpa()
+        {
+            Txt_Parametro1.Clear();
+            Txt_Parametro2.Clear();
+            Txt_Parametro3.Clear();
+            Mak_Parametro4.Clear();
+            CB_Parametro5.Text = ""; 
         }
     }
 }

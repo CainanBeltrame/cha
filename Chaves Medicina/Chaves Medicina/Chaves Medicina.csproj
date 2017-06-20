@@ -51,7 +51,10 @@
     <Compile Include="Camadas\DAL\Conexao.cs" />
     <Compile Include="Camadas\DAL\Dal_Chaves.cs" />
     <Compile Include="Camadas\DAL\Dal_Usuario.cs" />
+    <Compile Include="Camadas\MODEL\Model_Alunos.cs" />
     <Compile Include="Camadas\MODEL\Model_Chaves.cs" />
+    <Compile Include="Camadas\MODEL\Model_Movimento.cs" />
+    <Compile Include="Camadas\MODEL\Model_Turma.cs" />
     <Compile Include="Camadas\MODEL\Model_Usuario.cs" />
     <Compile Include="Envia Email.cs" />
     <Compile Include="Frm_Add.cs">

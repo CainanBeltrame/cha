@@ -8,6 +8,7 @@ namespace Chaves_Medicina.Camadas.MODEL
 {
     public class Model_Turma
     {
-
+        public int id { get; set; }
+        public int Descricao { get; set; }
     }
 }
