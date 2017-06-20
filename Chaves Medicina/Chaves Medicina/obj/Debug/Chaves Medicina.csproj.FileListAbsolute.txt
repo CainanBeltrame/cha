@@ -1,0 +1,12 @@
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\bin\Debug\Chaves Medicina.exe.config
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\bin\Debug\Chaves Medicina.exe
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\bin\Debug\Chaves Medicina.pdb
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.csprojResolveAssemblyReference.cache
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Login.resources
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Properties.Resources.resources
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.csproj.GenerateResource.Cache
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.exe
+c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.pdb
+C:\Users\LabSaude\Documents\Visual Studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Home.resources
+C:\Users\LabSaude\Documents\Visual Studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_soliCad.resources
+C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Add.resources
