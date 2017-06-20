@@ -14,6 +14,8 @@ namespace Chaves_Medicina
     public partial class Frm_Add : Form
     {
         Camadas.MODEL.Model_Chaves model_Chave = new Camadas.MODEL.Model_Chaves();
+        Camadas.MODEL.Model_Turma model_Turma = new Camadas.MODEL.Model_Turma();
+        Camadas.MODEL.Model_Alunos model_Aluno = new Camadas.MODEL.Model_Alunos();
         int add;
         public Frm_Add(int op)
         {
@@ -61,6 +63,19 @@ namespace Chaves_Medicina
                     Lbl_Parametro4.Text = "telefone:";
                     Lbl_Parametro5.Text = "Turma:";
                     Lbl_Obs.Visible = false;
+
+                    Camadas.BLL.Bll_Turma bll_turma = new Camadas.BLL.Bll_Turma();
+                    List<Camadas.MODEL.Model_Turma> lst_Turma = new List<Camadas.MODEL.Model_Turma>();
+                    lst_Turma = bll_turma.Select();
+
+                    int max_lst = lst_Turma.Count - 1;
+
+                    for(int i = 0; i <= max_lst; i++)
+                    {
+                        model_Turma = lst_Turma[i];
+                        CB_Parametro5.Items.Add(model_Turma.Descricao);
+                    }
+                    
                 }
                 else
                 {
@@ -157,11 +172,56 @@ namespace Chaves_Medicina
             {
                 if (add == 2)
                 {
+                    Camadas.BLL.Bll_Aluno bll_ALuno = new Camadas.BLL.Bll_Aluno();
+                    List<Camadas.MODEL.Model_Alunos> lst_Aluno = new List<Camadas.MODEL.Model_Alunos>();
+                    lst_Aluno = bll_ALuno.SelectbyRA(Convert.ToInt32(Txt_Parametro1.Text));
+                    if (lst_Aluno.Count > 0)
+                    {
+                        MessageBox.Show("Erro Aluno ja cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Deseja adicionar este aluno?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int id_turma;
 
+                            Camadas.BLL.Bll_Turma bll_turma = new Camadas.BLL.Bll_Turma();
+                            List<Camadas.MODEL.Model_Turma> lst_Turma = new List<Camadas.MODEL.Model_Turma>();
+                            lst_Turma = bll_turma.SelectbyDesc(CB_Parametro5.Text);
+                            model_Turma = lst_Turma[0];
+                            id_turma = model_Turma.id;
+
+                            Camadas.MODEL.Model_Alunos aluno = new Camadas.MODEL.Model_Alunos();
+
+                            aluno.ra = Convert.ToInt32(Txt_Parametro1.Text);
+                            aluno.nome = Txt_Parametro2.Text;
+                            aluno.email = Txt_Parametro3.Text;
+                            aluno.telefone = Mak_Parametro4.Text;
+                            aluno.fk_Turma = id_turma;
+                            bll_ALuno.Insert(aluno);
+                        }
+                    }
                 }
                 else
                 {
+                    Camadas.BLL.Bll_Turma bll_turma = new Camadas.BLL.Bll_Turma();
+                    List<Camadas.MODEL.Model_Turma> lst_Turma = new List<Camadas.MODEL.Model_Turma>();
+                    lst_Turma = bll_turma.SelectbyDesc(Txt_Parametro1.Text);
+                    if (lst_Turma.Count > 0)
+                    {
+                        MessageBox.Show("Erro Turma ja cadastrada!");
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Deseja Adicionar esta turma?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            Camadas.MODEL.Model_Turma turma = new Camadas.MODEL.Model_Turma();
 
+                            turma.Descricao = Convert.ToInt32(Txt_Parametro1.Text);
+
+                            bll_turma.Insert(turma);
+                        }
+                    }
                 }
             }
             limpa();
@@ -174,7 +234,7 @@ namespace Chaves_Medicina
             Txt_Parametro2.Clear();
             Txt_Parametro3.Clear();
             Mak_Parametro4.Clear();
-            CB_Parametro5.Text = ""; 
+            CB_Parametro5.SelectedIndex = -1; 
         }
     }
 }

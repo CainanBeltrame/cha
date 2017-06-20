@@ -18,5 +18,11 @@ namespace Chaves_Medicina.Camadas.BLL
             DAL.Dal_Turma dal_Turma = new DAL.Dal_Turma();
             return dal_Turma.SelectbyDesc(desc);
         }
+
+        public List<MODEL.Model_Turma> Select()
+        {
+            DAL.Dal_Turma dal_Turma = new DAL.Dal_Turma();
+            return dal_Turma.Select();
+        }
     }
 }

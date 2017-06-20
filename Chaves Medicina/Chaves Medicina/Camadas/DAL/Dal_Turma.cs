@@ -69,5 +69,37 @@ namespace Chaves_Medicina.Camadas.DAL
             return lst_Turma;
 
         }
+
+        public List<MODEL.Model_Turma> Select()
+        {
+            List<MODEL.Model_Turma> lst_Turma = new List<MODEL.Model_Turma>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "select * from Turma;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            conexao.Open();
+
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.Model_Turma turma = new MODEL.Model_Turma();
+
+                    turma.Descricao = Convert.ToInt32(reader["Desc_Turma"]);
+
+                    lst_Turma.Add(turma);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro ao consultar turma pela Descrição");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lst_Turma;
+        }
     }
 }

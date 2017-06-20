@@ -46,10 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camadas\BLL\Bll_Aluno.cs" />
     <Compile Include="Camadas\BLL\Bll_Chave.cs" />
+    <Compile Include="Camadas\BLL\Bll_Movimento.cs" />
+    <Compile Include="Camadas\BLL\Bll_Turma.cs" />
     <Compile Include="Camadas\BLL\Bll_Usuario.cs" />
     <Compile Include="Camadas\DAL\Conexao.cs" />
+    <Compile Include="Camadas\DAL\Dal_Aluno.cs" />
     <Compile Include="Camadas\DAL\Dal_Chaves.cs" />
+    <Compile Include="Camadas\DAL\Dal_Turma.cs" />
     <Compile Include="Camadas\DAL\Dal_Usuario.cs" />
     <Compile Include="Camadas\MODEL\Model_Alunos.cs" />
     <Compile Include="Camadas\MODEL\Model_Chaves.cs" />
