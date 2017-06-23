@@ -10,7 +10,7 @@ namespace Chaves_Medicina.Camadas.MODEL
     {
         public int id { get; set; }
         public string desc { get; set; }
-        public int situacao { get; set; }
+        public string situacao { get; set; }
         public int armario { get; set; }
     }
 }

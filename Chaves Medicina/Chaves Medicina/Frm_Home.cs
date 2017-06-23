@@ -66,5 +66,11 @@ namespace Chaves_Medicina
             Frm_Add ADD = new Frm_Add(3);
             ADD.ShowDialog();
         }
+
+        private void aluguelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Aluguel aluga = new Frm_Aluguel(User_ID);
+            aluga.ShowDialog();
+        }
     }
 }

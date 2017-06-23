@@ -10,3 +10,6 @@ c:\users\labsaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves M
 C:\Users\LabSaude\Documents\Visual Studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Home.resources
 C:\Users\LabSaude\Documents\Visual Studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_soliCad.resources
 C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Add.resources
+C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Aluguel.resources
+C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_lst_Chave.resources
+C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Aluga.resources

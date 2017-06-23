@@ -126,21 +126,21 @@
             // chavesToolStripMenuItem
             // 
             this.chavesToolStripMenuItem.Name = "chavesToolStripMenuItem";
-            this.chavesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chavesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.chavesToolStripMenuItem.Text = "Chaves";
             this.chavesToolStripMenuItem.Click += new System.EventHandler(this.chavesToolStripMenuItem_Click);
             // 
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.alunosToolStripMenuItem.Text = "Alunos";
             this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
             // 
             // turmasToolStripMenuItem
             // 
             this.turmasToolStripMenuItem.Name = "turmasToolStripMenuItem";
-            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.turmasToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.turmasToolStripMenuItem.Text = "Turmas";
             this.turmasToolStripMenuItem.Click += new System.EventHandler(this.turmasToolStripMenuItem_Click);
             // 
@@ -149,6 +149,7 @@
             this.aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
             this.aluguelToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.aluguelToolStripMenuItem.Text = "Aluguel";
+            this.aluguelToolStripMenuItem.Click += new System.EventHandler(this.aluguelToolStripMenuItem_Click);
             // 
             // buscarToolStripMenuItem
             // 

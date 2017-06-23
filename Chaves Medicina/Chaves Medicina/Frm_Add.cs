@@ -160,7 +160,7 @@ namespace Chaves_Medicina
                         Camadas.MODEL.Model_Chaves chave = new Camadas.MODEL.Model_Chaves();
 
                         chave.desc = Txt_Parametro1.Text;
-                        chave.situacao = 0;
+                        chave.situacao = Convert.ToString("disponivel");
                         chave.armario = Convert.ToInt32(Txt_Parametro1.Text);
 
                         bllChave.Insert(chave);

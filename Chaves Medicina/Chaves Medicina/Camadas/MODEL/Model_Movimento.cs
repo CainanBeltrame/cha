@@ -10,7 +10,7 @@ namespace Chaves_Medicina.Camadas.MODEL
     {
         public int id { get; set; }
         public DateTime data { get; set; }
-        public int tipo { get; set; }
+        public string tipo { get; set; }
         public int fk_Usuario { get; set; }
         public int fk_Aluno { get; set; }
         public int fk_Chave { get; set; }

@@ -19,5 +19,17 @@ namespace Chaves_Medicina.Camadas.BLL
             DAL.Dal_Chaves dalChave = new DAL.Dal_Chaves();
             return dalChave.SelectByNumero(number);
         }
+
+        public List<MODEL.Model_Chaves> SelectbyDispo()
+        {
+            DAL.Dal_Chaves dalChave = new DAL.Dal_Chaves();
+            return dalChave.SelectbyDispo();
+        }
+
+        public List<MODEL.Model_Chaves> SelectbyAlugada()
+        {
+            DAL.Dal_Chaves dalChave = new DAL.Dal_Chaves();
+            return dalChave.SelectbyAlugada();
+        }
     }
 }

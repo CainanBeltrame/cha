@@ -54,6 +54,7 @@
     <Compile Include="Camadas\DAL\Conexao.cs" />
     <Compile Include="Camadas\DAL\Dal_Aluno.cs" />
     <Compile Include="Camadas\DAL\Dal_Chaves.cs" />
+    <Compile Include="Camadas\DAL\Dal_Movimento.cs" />
     <Compile Include="Camadas\DAL\Dal_Turma.cs" />
     <Compile Include="Camadas\DAL\Dal_Usuario.cs" />
     <Compile Include="Camadas\MODEL\Model_Alunos.cs" />
@@ -67,6 +68,18 @@
     </Compile>
     <Compile Include="Frm_Add.Designer.cs">
       <DependentUpon>Frm_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Aluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Aluga.Designer.cs">
+      <DependentUpon>Frm_Aluga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Aluguel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Aluguel.Designer.cs">
+      <DependentUpon>Frm_Aluguel.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Home.cs">
       <SubType>Form</SubType>
@@ -86,10 +99,22 @@
     <Compile Include="Frm_soliCad.Designer.cs">
       <DependentUpon>Frm_soliCad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_lst_Chave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_lst_Chave.Designer.cs">
+      <DependentUpon>Frm_lst_Chave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Add.resx">
       <DependentUpon>Frm_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Aluga.resx">
+      <DependentUpon>Frm_Aluga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Aluguel.resx">
+      <DependentUpon>Frm_Aluguel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Home.resx">
       <DependentUpon>Frm_Home.cs</DependentUpon>
@@ -99,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_soliCad.resx">
       <DependentUpon>Frm_soliCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_lst_Chave.resx">
+      <DependentUpon>Frm_lst_Chave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
