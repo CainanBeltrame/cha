@@ -13,3 +13,6 @@ C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves M
 C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Aluguel.resources
 C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_lst_Chave.resources
 C:\Users\LabSaude\documents\visual studio 2015\Projects\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves_Medicina.Frm_Aluga.resources
+C:\Users\fema\Downloads\cha-master\cha-master\Chaves Medicina\Chaves Medicina\bin\Debug\Chaves Medicina.exe.config
+C:\Users\fema\Downloads\cha-master\cha-master\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.exe
+C:\Users\fema\Downloads\cha-master\cha-master\Chaves Medicina\Chaves Medicina\obj\Debug\Chaves Medicina.pdb

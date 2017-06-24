@@ -16,6 +16,8 @@ namespace Chaves_Medicina
         Camadas.MODEL.Model_Alunos model_Aluno = new Camadas.MODEL.Model_Alunos();
         Camadas.MODEL.Model_Movimento model_Movimento = new Camadas.MODEL.Model_Movimento();
         Camadas.MODEL.Model_Chaves model_Chave = new Camadas.MODEL.Model_Chaves();
+
+        int ID_Aluno, ID_Chave;
         
 
         int user_id;
@@ -91,28 +93,8 @@ namespace Chaves_Medicina
 
             if(MessageBox.Show("Realizar o aluguel desta chave?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Camadas.MODEL.Model_Movimento movimento = new Camadas.MODEL.Model_Movimento();
-
-                Camadas.MODEL.Model_Chaves chave = new Camadas.MODEL.Model_Chaves();
-                List<Camadas.MODEL.Model_Chaves> lst_Chave = new List<Camadas.MODEL.Model_Chaves>();
-                Camadas.BLL.Bll_Chave bll_Chave = new Camadas.BLL.Bll_Chave();
-                lst_Chave = bll_Chave.SelectByNumero(cb_selected);
-                chave = lst_Chave[0];
-
-                Camadas.MODEL.Model_Alunos aluno = new Camadas.MODEL.Model_Alunos();
-                List<Camadas.MODEL.Model_Alunos> lst_Aluno = new List<Camadas.MODEL.Model_Alunos>();
-                Camadas.BLL.Bll_Aluno bll_Aluno = new Camadas.BLL.Bll_Aluno();
-                lst_Aluno = bll_Aluno.SelectbyRA(Convert.ToInt32(txt_RA.Text));
-                aluno = lst_Aluno[0];
-
-                movimento.data = Convert.ToDateTime(TS_LBL_DATA.Text);
-                movimento.tipo = Convert.ToString("locação");
-                movimento.fk_Usuario = user_id;
-                movimento.fk_Chave = chave.id;
-                movimento.fk_Aluno = aluno.id;
-
-                bll_Movimento.InsertMovimento(movimento, Convert.ToInt32(cb_selected),1);
-
+                getAlunoID();
+                getChaveID();
             }
 
             txt_RA.Clear();
@@ -122,7 +104,7 @@ namespace Chaves_Medicina
 
         }
 
-        public void VerificaRA()
+        public void getAlunoID()
         {
             Camadas.BLL.Bll_Aluno bll_ALuno = new Camadas.BLL.Bll_Aluno();
             List<Camadas.MODEL.Model_Alunos> lst_aluno = new List<Camadas.MODEL.Model_Alunos>();
@@ -134,11 +116,27 @@ namespace Chaves_Medicina
                 txt_RA.Clear();
                 CB_Chave.SelectedIndex = -1;
             }
+            else
+            {
+                model_Aluno = lst_aluno[0];
+                ID_Aluno = model_Aluno.id;
+            }
         }
 
+        public void getChaveID()
+        {
+            Camadas.BLL.Bll_Chave bll_Chave = new Camadas.BLL.Bll_Chave();
+            List<Camadas.MODEL.Model_Chaves> lst_Chave = new List<Camadas.MODEL.Model_Chaves>();
+            lst_Chave = bll_Chave.SelectByNumero(CB_Chave.Text);
+            if(lst_Chave.Count > 0)
+            {
+                model_Chave = lst_Chave[0];
+                ID_Chave = model_Chave.id;
+            }
+        }
         private void txt_RA_Leave(object sender, EventArgs e)
         {
-            VerificaRA();
+            getAlunoID();
         }
     }
 }
